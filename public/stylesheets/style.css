@@ -6,11 +6,17 @@ body {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.1),
       rgba(0, 0, 0, 0.1)
-    ), url("./landing-page-bg.jpg");
+    ), url("./page-bg.jpg");
   background-size: cover;
   background-position: center;
   backdrop-filter: saturate(180%) blur(1rem);
   height: 100vh;
+}
+
+p {
+  margin-bottom: 0 !important;
+  align-content: center;
+  align-items: center;
 }
 
 .text-info {
@@ -37,6 +43,7 @@ body {
 .log-in-buttons {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #log-in-btn {
@@ -55,6 +62,32 @@ border-color: black;
 font-size: 1.1rem;
 }
 
+#go-back-btn {
+  margin: 20px 20px 0 20px;
+  color: black;
+  background-color: rgb(235, 85, 255);
+  border-color: black;
+  font-size: 1.1rem;
+  }
+
+.short-form-group {
+  width: 100%;
+  display: inline-flex;
+  justify-content: left;
+  margin: 20px 0 5px 0;
+}
+
+.short-form {
+  width: 45%;
+}
+
+#firstname {
+  margin: 10px 20px 10px 0;
+}
+
+#lastname {
+  margin: 10px 0 10px 30px;
+}
 
 
 
@@ -66,6 +99,11 @@ font-size: 1.1rem;
 }
 
 #sign-up-btn:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
+}
+
+#go-back-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
 }
