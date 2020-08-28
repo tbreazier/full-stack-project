@@ -139,7 +139,7 @@ font-size: 1.1rem;
   display: flex;
   justify-content: center;
   min-width: 30%;
-  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: rgba(0, 0, 0, 0.8); */
   color: white;
   border-radius: 5px;
   flex-direction: column;
@@ -149,9 +149,12 @@ font-size: 1.1rem;
   text-align: center;
   margin: 10px 0 10px 0;
   width: 100%;
-  background-color: rgba(44, 151, 252, 0.2);
+  /* background-color: rgba(111, 185, 255, 0.555); */
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
 }
+
+
 
 
 
@@ -176,3 +179,8 @@ font-size: 1.1rem;
   transform: scale(1.1);
   transition: 0.05s;
   }
+
+.post-column-title:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
+}
