@@ -1,50 +1,50 @@
 body {
-    font-family: 'Londrina Solid', cursive;
-    margin: 0;
-    padding: 0;
-    background-color: #17a2b8;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0.1)
-      ), url("./landing-page-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    backdrop-filter: saturate(180%) blur(1rem);
-    height: 100vh;
-  }
+  font-family: 'Londrina Solid', cursive;
+  margin: 0;
+  padding: 0;
+  background-color: #17a2b8;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ), url("./landing-page-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: saturate(180%) blur(1rem);
+  height: 100vh;
+}
 
-  .text-info {
-      color: black !important;
-      font-size: 3rem !important;
-  }
+.text-info {
+    color: black !important;
+    font-size: 3rem !important;
+}
 
-  #login .container #login-row #login-column #login-box {
-    margin-top: 120px;
-    max-width: 600px;
-    height: 320px;
-    border: none;
-    background-color: rgba(68, 65, 65, 0);
-  }
+#login .container #login-row #login-column #login-box {
+  margin-top: 120px;
+  max-width: 600px;
+  height: 320px;
+  border: none;
+  background-color: rgba(68, 65, 65, 0);
+}
 
-  #login .container #login-row #login-column #login-box #login-form {
-    padding: 20px;
-  }
+#login .container #login-row #login-column #login-box #login-form {
+  padding: 20px;
+}
 
-  #login .container #login-row #login-column #login-box #login-form #register-link {
-    margin-top: -85px;
-  }
+#login .container #login-row #login-column #login-box #login-form #register-link {
+  margin-top: -85px;
+}
 
-  .log-in-buttons {
-      display: flex;
-      justify-content: center;
-  }
+.log-in-buttons {
+    display: flex;
+    justify-content: center;
+}
 
 #log-in-btn {
-    margin: 0 10px 0 10px;
-    color: black;
-    background-color: rgb(231, 218, 31);
-    border-color: black;
-    font-size: 1.1rem;
+  margin: 0 10px 0 10px;
+  color: black;
+  background-color: rgb(231, 218, 31);
+  border-color: black;
+  font-size: 1.1rem;
 }
 
 #sign-up-btn {
@@ -53,4 +53,19 @@ color: black;
 background-color: rgb(231, 218, 31);
 border-color: black;
 font-size: 1.1rem;
+}
+
+
+
+
+
+/* pseudo styling */
+#log-in-btn:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
+}
+
+#sign-up-btn:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
 }
