@@ -1,0 +1,16 @@
+<section class="card-post">
+    <div class="card-post-header">
+        <h2>Edit Post</h2>
+    </div>
+    <form>
+        <div>
+            <label for="post-content">Content</label>
+            <textarea class="card-input-textarea" name="post-text" value="{{post.post_text}}"></textarea>
+        </div>
+
+        <button class="card-button" type="submit" id="edit-post-btn">Save post</button>
+        <button class="card-button" type="button" id="delete-post-btn">Delete post</button>
+    </form>
+</section>
+<script src="../public/javascript/edit-post.js"></script>
+<script src="../public/javascript/delete-post.js"></script>

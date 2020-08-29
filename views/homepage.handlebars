@@ -1,9 +1,17 @@
+ {{ #each posts as |posts| }}
 <div class="row post-row">
-
-    {{#each post_text as |post_text|}}
-
-    {{#each photo as |photo|}}
-
-    {{#each trending as |trending|}}
-    
+    {{> text-info posts }}
 </div>
+ {{/each}}
+
+ {{ #each photos as |photos| }}
+<div class="row post-row">
+    {{> photo photos }}
+</div>
+ {{/each}}
+
+ {{ #each trending as |trending| }}
+<div class="row post-row">
+    {{> api trending }}
+</div>
+ {{/each}}

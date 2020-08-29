@@ -14,12 +14,12 @@
     <nav class="navbar navbar-expand-lg navbar-light">
 
         <div class="back-button-container col-md-4">
-            <a href="landing-index.html" type="button" name="goback" class="btn btn-info btn-md" id="go-back-btn">Go Back</a>
+            <a href="landingpage" type="button" name="goback" class="btn btn-info btn-md" id="go-back-btn">Go Back</a>
         </div>
 
         <div class="text-center homepage-title-plus-container col-md-4">
             <h1 class="text-center">Simple Social</h1>
-            <a href="" id="create-post-btn"><i class="fas fa-plus" style="font-size: 60px; color: rgb(0, 0, 0);"></i></a>
+            <a href="create-post" id="create-post-btn"><i class="fas fa-plus" style="font-size: 60px; color: rgb(0, 0, 0);"></i></a>
         </div>
 
         <div class="text-center col-md-2">
@@ -28,7 +28,7 @@
         <div class="text-center user-info col-md-2">
             <i class="fab fa-joomla" style="font-size: 38px;"></i>
             <h6>{{ name }}</h6>
-            <h6>Posts: <span class="badge" style="color: rgb(231, 218, 31);">{{ numberposts }}</span></h6>
+            <span class="badge" style="color: rgb(231, 218, 31);">{{ avatar }}</span>
         </div>
 
       </nav>
@@ -38,6 +38,8 @@
         {{{ body }}}
 
     </div>
-
+    {{#if loggedIn}}
+    <script src="../../public/javascript/logout.js"></script>
+    {{/if}}
 </body>
 </html>

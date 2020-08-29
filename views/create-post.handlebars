@@ -1,0 +1,23 @@
+<section class="card">
+    <div class="card-header">
+        <h2>Create New Post</h2>
+    </div>
+    <form class="new-post-form">
+        <div>
+            <label for="post-content">Content</label>
+            <textarea class="card-input-textarea" id="post-content" name="post-content"></textarea>
+        </div>
+        <button class="card-button" type="submit" class="btn">Create</button>
+    </form>
+</section>
+
+<section class="card">
+    <div class="card-header">
+        <h2>Upload a Photo</h2>
+    </div>
+    <form method="post" enctype="multipart/form-data" action="/upload">
+    <input type="file" name="file">
+    <input type="submit" value="Submit">
+</form>
+</section>
+<script src="../public/javascript/create-post.js"></script>
