@@ -16,11 +16,11 @@ async function newFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/homepage');
+      document.location.replace('/home');
     } else {
       window.alert("you must log in first!!");
       alert(response.statusText);
     }
   }
   
-  document.querySelector('#create-post-form').addEventListener('submit', newFormHandler);
+  document.querySelector('#new-post-form').addEventListener('submit', newFormHandler);
