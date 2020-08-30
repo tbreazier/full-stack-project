@@ -29,8 +29,16 @@ app.get('/', (req, res) => {
     res.render('landingpage');
 });
 
+app.get('/signup', (req, res) => {
+    res.render('signup');
+});
+
 app.get('/home', (req, res) => {
     res.render('homepage', posts);
+});
+
+app.get('/create', (req, res) => {
+    res.render('create-post', posts);
 });
 
 app.listen(PORT, () => {
