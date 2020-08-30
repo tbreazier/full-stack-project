@@ -44,7 +44,6 @@ let redditData = ""
 fetch(url, settings)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         redditData = [
     {
     title: data.data.children[0].data.title,
@@ -84,6 +83,10 @@ app.get('/', (req, res) => {
 
 app.get('/create', (req, res) => {
     res.render('create-post');
+});
+
+app.get('/upload', (req, res) => {
+    res.render('upload');
 });
 
 app.listen(PORT, () => {

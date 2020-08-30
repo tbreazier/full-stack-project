@@ -21,15 +21,10 @@
 
 <section class="card">
     <div class="card-header">
-        <h2>Create New Post</h2>
+        <h2>Upload a Photo</h2>
     </div>
-    <form class="new-post-form">
-        <div>
-            <label for="post-content">Content</label>
-            <textarea class="card-input-textarea" id="post-content" name="post-content"></textarea>
-        </div>
-        <button class="card-button" type="submit" class="btn">Upload</button>
+    <form action="/upload/photo" enctype="multipart/form-data" method="POST">
+        <input type="file" name="myImage" accept="image/*" />
+        <input type="submit" value="Upload Photo" />
     </form>
 </section>
-
-<script src="/javascript/create-post.js"></script>
