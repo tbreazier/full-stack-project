@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars');
 const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch');
+const { title } = require('process');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -38,30 +39,38 @@ const photos = [
 ];
 
 let url = 'https://www.reddit.com/.json?limit=5';
-
 let settings = { method: "Get"};
-
+let redditData = ""
 fetch(url, settings)
     .then(res => res.json())
     .then(data => {
         console.log(data)
+        redditData = [
+    {
+    title: data.data.children[0].data.title,
+    url: data.data.children[0].data.url_overridden_by_dest
+    },
+    {
+        title: data.data.children[1].data.title,
+        url: data.data.children[1].data.url_overridden_by_dest
+    },
+    {
+        title: data.data.children[2].data.title,
+        url: data.data.children[2].data.url_overridden_by_dest
+    },
+    {
+        title: data.data.children[3].data.title,
+        url: data.data.children[3].data.url_overridden_by_dest
+    },
+    {
+        title: data.data.children[4].data.title,
+        url: data.data.children[4].data.url_overridden_by_dest
+    }
+    ];
 });
-    // data.children.data.title
-    // data.children.data.url_overriden_by_dest
-const trendingposts = [
-    {
-        title: 'Trending 1',
-    },
-    {
-        title: 'Trending 2',
-    },
-    {
-        title: 'Trending 3',
-    },
-];
 
 app.get('/home', (req, res) => {
-    const data = {posts, photos, trendingposts};
+    const data = {posts, photos, redditData};
     res.render('homepage', data);
 });
 

@@ -23,6 +23,7 @@
 
 <div class="row post-row">
     <div id="text-posts col-md-4" class="posts-container">
+        <h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">User Text</h2>
         {{#each posts as |post|}}
         <div class="post">
             <h4>{{post_text}}</h4>
@@ -31,6 +32,7 @@
     </div>
 
     <div id="text-posts col-md-4" class="posts-container">
+        <h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">User Photos</h2>
         {{#each photos as |photo|}}
         <div class="post">
            <h4>{{content}}</h4>
@@ -39,9 +41,10 @@
     </div>
 
     <div id="text-posts col-md-4" class="posts-container">
-        {{#each trendingposts as |trending|}}
+        <h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">Trending from Reddit</h2>
+        {{#each redditData as |reddit|}}
         <div class="post">
-            <h4>{{title}}</h4>
+            <h4><a href="{{url}}">{{title}}</a></h4>
         </div>
         {{/each}}
     </div>
