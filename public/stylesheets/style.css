@@ -143,12 +143,14 @@ font-size: 1.1rem;
 .post-row {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .posts-container {
   padding: 10px 10px 10px 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-width: 30%;
   /* background-color: rgba(0, 0, 0, 0.8); */
   color: white;
@@ -159,10 +161,25 @@ font-size: 1.1rem;
 .post {
   text-align: center;
   margin: 10px 0 10px 0;
-  width: 100%;
+  padding: 10px 10px 10px 10px;
+  width: 90%;
+  height: 10.5vh;
   /* background-color: rgba(111, 185, 255, 0.555); */
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
+  text-align: left;
+}
+
+.post-edit {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  padding: 10px 10px 10px 10px;
+  width: 90%;
+  height: 100%;
+  /* background-color: rgba(111, 185, 255, 0.555); */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  text-align: left;
 }
 
 .card-post {
@@ -170,6 +187,7 @@ font-size: 1.1rem;
   color: rgb(0, 0, 0);
   /* background-color: rgb(0, 0, 0, 0.8); */
   border-radius: 10px;
+  margin: 15px 0 15px 0;
 }
 
 .card-post-header {
@@ -187,7 +205,22 @@ font-size: 1.1rem;
   width: 90%;
 }
 
+/* .edit-post-btn-container {
+  display: flex;
+  justify-content: flex-start;
+} */
+
 #edit-post-btn {
+  margin: 10px 5px 10px 5px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(231, 218, 31);
+  font-size: 18px;
+  border: solid rgb(0, 0, 0);
+  border-width: 1px;
+  cursor: pointer;
+}
+
+#save-post-btn {
   margin: 10px 5px 10px 5px;
   color: rgb(255, 255, 255);
   background-color: rgb(20, 117, 33);
@@ -249,5 +282,10 @@ font-size: 1.1rem;
 
 #delete-post-btn:hover {
   transform: scale(1.1);
+  transition: 0.05s;
+}
+
+.post:hover {
+  transform: scale(1.02);
   transition: 0.05s;
 }

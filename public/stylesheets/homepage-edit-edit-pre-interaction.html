@@ -38,34 +38,14 @@
 <div class="main-container">
     <div class="row post-row">
         <div id="text-posts" class="posts-container col-lg-8">
-            <div class="post">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+            <div class="post post-edit">
+                <div class="edit-post-btn-container">
+                    <button class="card-button" type="submit" id="edit-post-btn">Edit Post</button>
+                </div>
+                <a href="www.google.com" style="text-decoration: none; color: white;"><h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4></a>
             </div>
         </div>
     </div>
-
-    <div class="row post-row">
-        <section class="card-post">
-            <form>
-                <div class="edit-input-container edit-title">
-                    <label for="post-content"></label>
-                    <textarea class="card-input-textarea" name="post-text" value="{{post.post_text}}" placeholder="Title"></textarea>
-                </div>
-
-                <div class="edit-input-container edit-content">
-                    <label for="post-content"></label>
-                    <textarea class="card-input-textarea" name="post-text" value="{{post.post_text}}"" placeholder="Content"></textarea>
-                </div>
-               
-                <div class="edit-input-container">
-                    <button class="card-button" type="submit" id="save-post-btn">Save Post</button>
-                    <button class="card-button" type="button" id="delete-post-btn">Delete post</button>
-                </div>
-            
-            </form>
-        </section>
-    </div>
-    
 
 </div>
 
