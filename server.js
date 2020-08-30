@@ -3,7 +3,6 @@ const exphbs = require('express-handlebars');
 const express = require('express');
 const path = require('path');
 const fetch = require('node-fetch');
-const { title } = require('process');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -23,18 +22,6 @@ const posts = [
     {
         title: 'Test 3',
         post_text: 'This is the final test test'
-    },
-];
-
-const photos = [
-    {
-        content: 'Photo 1',
-    },
-    {
-        content: 'Photo 2',
-    },
-    {
-        content: 'Photo 3',
     },
 ];
 
@@ -69,7 +56,7 @@ fetch(url, settings)
 });
 
 app.get('/home', (req, res) => {
-    const data = {posts, photos, redditData};
+    const data = {posts, redditData};
     res.render('homepage', data);
 });
 
@@ -85,9 +72,6 @@ app.get('/create', (req, res) => {
     res.render('create-post');
 });
 
-app.get('/upload', (req, res) => {
-    res.render('upload');
-});
 
 app.listen(PORT, () => {
     console.log('App listening on PORT' + PORT);
