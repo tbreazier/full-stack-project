@@ -81,6 +81,17 @@ font-size: 1.1rem;
   font-size: 1.1rem;
   }
 
+.button-row {
+  display: flex;
+  justify-content: center;
+}
+
+  .sign-up-buttons {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .short-form-group {
   width: 100%;
   display: inline-flex;
@@ -163,7 +174,7 @@ font-size: 1.1rem;
   margin: 10px 0 10px 0;
   padding: 10px 10px 10px 10px;
   width: 90%;
-  height: 10.5vh;
+  height: 10.2vh;
   /* background-color: rgba(111, 185, 255, 0.555); */
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
@@ -179,7 +190,7 @@ font-size: 1.1rem;
   /* background-color: rgba(111, 185, 255, 0.555); */
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
-  text-align: left;
+  text-align: center;
 }
 
 .card-post {
@@ -222,22 +233,22 @@ font-size: 1.1rem;
 
 #save-post-btn {
   margin: 10px 5px 10px 5px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   background-color: rgb(20, 117, 33);
-  text-shadow: 1px 1px 1px black;
-  font-size: 18px;
+  font-size: 20px;
   border: solid rgb(0, 0, 0);
   border-width: 1px;
+  border-radius: 5px;
 }
 
 #delete-post-btn {
   margin: 10px 5px 10px 5px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   background-color: hsl(0, 100%, 70%);
-  text-shadow: 1px 1px 1px black;
-  font-size: 18px;
+  font-size: 20px;
   border: solid rgb(0, 0, 0);
   border-width: 1px;
+  border-radius: 5px;
 }
 
 
@@ -248,44 +259,53 @@ font-size: 1.1rem;
 #log-in-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #sign-up-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #go-back-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #log-out-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #create-post-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
   }
 
 .post-column-title:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
-#edit-post-btn:hover {
+#save-post-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #delete-post-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 .post:hover {
   transform: scale(1.02);
   transition: 0.05s;
+  cursor: pointer;
 }
