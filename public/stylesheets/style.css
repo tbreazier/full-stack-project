@@ -73,139 +73,12 @@ font-size: 1.1rem;
   border-color: black;
   font-size: 1.1rem;
   }
-<<<<<<< HEAD
-  
-  #go-back-btn-signup-page {
-    margin: 20px 20px 0 20px;
-    color: black;
-    background-color: hsl(0, 100%, 70%);
-    border-color: black;
-    font-size: 1.1rem;
-    }
-  
-  #go-back-btn {
-    color: black;
-    background-color: hsl(0, 100%, 70%);
-    border-color: black;
-    font-size: 1.1rem;
-    }
-  
-  .short-form-group {
-    width: 100%;
-    display: inline-flex;
-    justify-content: left;
-    margin: 20px 0 5px 0;
-  }
-  
-  .short-form {
-    width: 45%;
-  }
-  
-  #firstname {
-    margin: 10px 20px 10px 0;
-  }
-  
-  #lastname {
-    margin: 10px 0 10px 30px;
-  }
-  
-  .navbar {
-    justify-content: center;
-  }
-  
-  .homepage-title-plus-container {
-    display: flex;
-    flex-direction: column;
-    color: black;
-  }
-  
-  .user-info {
-    max-width: 5%;
-    display: flex;
-    flex-direction: column;
-    color: rgb(231, 218, 31);
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    border-radius: 20px;
-  }
-  
-  #log-out-btn {
-    background-color: red;
-    border: black;
-    width: 25%;
-    height: 65%;
-    font-size: 14px;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-  }
-  
-  #create-post-btn {
-    margin: 5px 0 5px 0;
-    color: rgb(20, 117, 33);
-    text-shadow: 1px 1px 1px black;
-    }
-  
-  .main-container {
-    margin: 70px 50px 50px 50px;
-  }
-  
-  .post-row {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .posts-container {
-    padding: 10px 10px 10px 10px;
-    display: flex;
-    justify-content: center;
-    min-width: 30%;
-    /* background-color: rgba(0, 0, 0, 0.8); */
-    color: white;
-    border-radius: 5px;
-    flex-direction: column;
-  }
-  
-  .post {
-    text-align: center;
-    margin: 10px 0 10px 0;
-    width: 100%;
-    /* background-color: rgba(111, 185, 255, 0.555); */
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-  }
-  
-  
-  
-  
-  
-  
-  /* pseudo styling */
-  #log-in-btn:hover {
-    transform: scale(1.1);
-    transition: 0.05s;
-  }
-  
-  #sign-up-btn:hover {
-    transform: scale(1.1);
-    transition: 0.05s;
-  }
-  
-  #go-back-btn:hover {
-    transform: scale(1.1);
-    transition: 0.05s;
-  }
-  
-  #log-out-btn:hover {
-    transform: scale(1.1);
-    transition: 0.05s;
-=======
 
 #go-back-btn {
   color: black;
   background-color: hsl(0, 100%, 70%);
   border-color: black;
   font-size: 1.1rem;
->>>>>>> mlinden
   }
 
 .short-form-group {
@@ -292,6 +165,47 @@ font-size: 1.1rem;
   border-radius: 5px;
 }
 
+.card-post {
+  width: 50%;
+  color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0, 0.8); */
+  border-radius: 10px;
+}
+
+.card-post-header {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-input-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.card-input-textarea {
+  width: 90%;
+}
+
+#edit-post-btn {
+  margin: 10px 5px 10px 5px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(20, 117, 33);
+  text-shadow: 1px 1px 1px black;
+  font-size: 18px;
+  border: solid rgb(0, 0, 0);
+  border-width: 1px;
+}
+
+#delete-post-btn {
+  margin: 10px 5px 10px 5px;
+  color: rgb(255, 255, 255);
+  background-color: hsl(0, 100%, 70%);
+  text-shadow: 1px 1px 1px black;
+  font-size: 18px;
+  border: solid rgb(0, 0, 0);
+  border-width: 1px;
+}
 
 
 
@@ -324,6 +238,16 @@ font-size: 1.1rem;
   }
 
 .post-column-title:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
+}
+
+#edit-post-btn:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
+}
+
+#delete-post-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
 }
