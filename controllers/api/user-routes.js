@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post} = require('../../models');
 
+
 // GET /api/users
 router.get('/', (req, res) => {
     User.findAll({
@@ -43,9 +44,9 @@ router.get('/:id', (req, res) => {
 // POST /api/user -- create user on signup
 router.post('/', (req, res) => {
     User.create({
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,    
-        email: req.body.username,
+        first: req.body.first,
+        last: req.body.last,    
+        email: req.body.email,
         password: req.body.password
     })
         .then((dbUserData) => {

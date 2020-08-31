@@ -10,7 +10,7 @@ router.get('/home', (req, res) => {
         ],
       })
         .then(dbPostData => {
-          const posts = dbPostData.map(post => post.get({ plain: true }));
+          const posts = dbPostData.map(Post => Post.get({ plain: true }));
     
           res.render('homepage', {
             posts, redditData,

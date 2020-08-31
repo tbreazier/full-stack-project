@@ -3,8 +3,7 @@ const { User, Post} = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // POST /api/posts
-router.post('/create', (req, res) => {
-    console.log("req.body", req.body)
+router.post('/', (req, res) => {
     Post.create({
         content: req.body.content,
         user_id: req.session.user_id
