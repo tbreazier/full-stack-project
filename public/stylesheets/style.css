@@ -8,9 +8,11 @@ body {
       rgba(0, 0, 0, 0.1)
     ), url("./page-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   backdrop-filter: saturate(180%) blur(1rem);
-  height: 120vh;
+  height: 155vh;
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
 p {
@@ -174,7 +176,7 @@ font-size: 1.1rem;
   margin: 10px 0 10px 0;
   padding: 10px 10px 10px 10px;
   width: 90%;
-  height: 10.2vh;
+  height: 9.7vh;
   /* background-color: rgba(111, 185, 255, 0.555); */
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
