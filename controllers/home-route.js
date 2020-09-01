@@ -55,6 +55,10 @@ router.get('/create', (req, res) => {
 //   res.render('viewpost');
 // });
 
+router.get('/editpost', (req, res) => {
+  res.render('editpost');
+});
+
 
 router.get('/', (req, res) => {
     res.render('landingpage');

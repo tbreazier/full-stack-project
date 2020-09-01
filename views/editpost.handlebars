@@ -1,16 +1,29 @@
-<section class="card-post">
-    <div class="card-post-header">
-        <h2>Edit Post</h2>
-    </div>
-    <form>
-        <div>
-            <label for="post-content">Content</label>
-            <textarea class="card-input-textarea" name="post-text" value="{{post.post_text}}"></textarea>
-        </div>
 
-        <button class="card-button" type="submit" id="edit-post-btn">Save post</button>
-        <button class="card-button" type="button" id="delete-post-btn">Delete post</button>
-    </form>
-</section>
+<div class="row post-row">
+        <section class="card-post">
+            <div class="card-post-header">
+                <h2>Edit Post</h2>
+            </div>
+            <form>
+                <div class="edit-input-container edit-title">
+                    <label for="post-content"></label>
+                    <textarea class="card-input-textarea" name="post-text" value="{{post.post_title}}" placeholder="Title"></textarea>
+                </div>
+
+                <div class="edit-input-container edit-content">
+                    <label for="post-content"></label>
+                    <textarea class="card-input-textarea" name="post-text" value="{{post.post_text}}" placeholder="Content"></textarea>
+                </div>
+               
+                <div class="edit-input-container">
+                    <button class="card-button" type="submit" id="save-post-btn">Save Post</button>
+                    <button class="card-button" type="button" id="delete-post-btn">Delete post</button>
+                </div>
+            
+            </form>
+        </section>
+    </div>
+
+
 <script src="/javascript/edit-post.js"></script>
-<script src="/public/javascript/delete-post.js"></script>
+<script src="/javascript/delete-post.js"></script>

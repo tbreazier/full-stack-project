@@ -22,7 +22,6 @@
             </div>
         </div>
 
-
 </nav>
 
 <div class="main-container">
@@ -30,34 +29,14 @@
         <div id="text-posts" class="posts-container col-md-6">
             <a href="" class="post-column-title" style="text-decoration: none;"><h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Text ]</h2></a>
             {{#each posts as |post|}}
-            <div class="post" id="post-{{id}}">
+            <div class="post-edit" id="post-{{id}}">
                 <a href="/viewpost/{{id}}" style="text-decoration: none; color: white;" class="clickable-post"><h4>{{content}}</h4></a>
+            <div class="edit-post-btn-container">
+                    <a href="/editpost" class="card-button btn btn-md" type="submit" id="edit-post-btn">Edit Post</a>
+                </div>
             </div>
             {{/each}}
         </div>
-
-    <div class="row post-row">
-        <section class="card-post">
-            <form>
-                <div class="edit-input-container edit-title">
-                    <label for="post-content"></label>
-                    <textarea class="card-input-textarea" name="post-text" value="{{post.post_text}}" placeholder="Title"></textarea>
-                </div>
-
-                <div class="edit-input-container edit-content">
-                    <label for="post-content"></label>
-                    <textarea class="card-input-textarea" name="post-text" value="{{post.post_text}}" placeholder="Content"></textarea>
-                </div>
-               
-                <div class="edit-input-container">
-                    <button class="card-button" type="submit" id="save-post-btn">Save Post</button>
-                    <button class="card-button" type="button" id="delete-post-btn">Delete post</button>
-                </div>
-            
-            </form>
-        </section>
-    </div>
-    
 
 </div>
 
