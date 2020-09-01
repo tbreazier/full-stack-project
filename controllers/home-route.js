@@ -31,6 +31,30 @@ router.get('/create', (req, res) => {
   res.render('create-post');
 });
 
+router.get('/users/:id', (req, res) => {
+  User.findOne({
+    where: {
+      id: req.params.id
+    },
+    attributes: [
+      'first',
+      'last'
+    ],
+  })
+    .then(dbUserData => {
+      // serialize data before passing to template
+      const user = dbUserData.get({ plain: true });
+      console.log(user);
+      res.render('homepage', {
+        user,
+        loggedIn: true
+      })
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 router.get('/', (req, res) => {
     res.render('landingpage');
