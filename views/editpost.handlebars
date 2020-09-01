@@ -1,4 +1,18 @@
+<div>
+   <h1>{{content}}</h1>
+</div>
+
+
 <div class="row post-row">
+    <div id="text-posts" class="posts-container col-md-8">
+            <h2 style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Posts ]</h2>
+            {{#each posts as |post|}}
+            <div class="post">
+                <a href="/editpost/{{id}}" style="text-decoration: none; color: white; word-break:break-all;" class="clickable-post"><h4>{{content}}</h4></a>
+            </div>
+            {{/each}}
+        </div>
+
         <section class="card-post">
             <div class="card-post-header">
                 <h2>Edit Post</h2>

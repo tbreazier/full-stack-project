@@ -43,6 +43,46 @@ router.get('/viewposts', withAuth, (req, res) => {
       });
   });
 
+  router.get('/viewtrending', withAuth, (req, res) => {
+    Post.findAll({
+        attributes: [
+          'id',
+          'content',
+        ],
+      })
+        .then(dbPostData => {
+          const posts = dbPostData.map(Post => Post.get({ plain: true }));
+    
+          res.render('viewtrending', {
+            posts, redditData,
+          });
+        })
+        .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+        });
+    });
+
+router.get('/editpost/:id', withAuth, (req, res) => {
+  Post.findAll({
+      attributes: [
+        'id',
+        'content',
+      ],
+    })
+      .then(dbPostData => {
+        const posts = dbPostData.map(Post => Post.get({ plain: true }));
+  
+        res.render('editpost', {
+          posts
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 router.get('/signup', (req, res) => {
     res.render('signup');
 });
@@ -53,6 +93,10 @@ router.get('/create', (req, res) => {
 
 router.get('/viewposts', (req, res) => {
   res.render('viewposts');
+});
+
+router.get('/viewtrending', (req, res) => {
+  res.render('viewtrending');
 });
 
 router.get('/editpost', (req, res) => {
