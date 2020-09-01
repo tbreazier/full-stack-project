@@ -15,14 +15,13 @@
         </div>
 
         <div class="text-center user-info col-md-2">
-            {{#each user}}
-            <img src="https://ui-avatars.com/api/?name={{this.datavalues.first}}+{{this.datavalues.last}}?color=ff0000">
-            <h6>{{this.datavalues.first}}{{this.datavalues.last}}</h6>
-            {{/each}}
+            <img src="https://ui-avatars.com/api/?name={{user.first}}+{{user.last}}?color=ff0000">
+            <h6>{{user.first}}{{user.last}}</h6>
             <div class="log-out-btn-container">
-                <a href="/login" type="button" name="logout" class="btn btn-info btn-md" id="log-out-btn">Log Out</a>
+                <a href="/" type="button" name="logout" class="btn btn-info btn-md" id="log-out-btn">Log Out</a>
             </div>
         </div>
+
 
 </nav>
 
@@ -32,7 +31,7 @@
             <a href="" class="post-column-title" style="text-decoration: none;"><h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Text ]</h2></a>
             {{#each posts as |post|}}
             <div class="post" style="text-overflow: ellipsis; overflow: hidden;">
-                <a href="/viewpost" style="text-decoration: none; color: white;"><h4>{{content}}</h4></a>
+                <a href="/api/posts" style="text-decoration: none; color: white;"><h4>{{content}}</h4></a>
             </div>
             {{/each}}
         </div>
@@ -46,6 +45,8 @@
             {{/each}}
         </div>
     </div>
-    <script src="javascript/logout.js"></script>
 </div>
-
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+<script src="/javascript/view-post.js"></script>
+{{/if}}
