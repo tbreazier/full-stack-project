@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const fetch = require('node-fetch');
-const { Post, User } = require('../models')
+const { Post, User } = require('../models');
+const withAuth = require("../utils/auth");
 
-router.get('/home', (req, res) => {
+router.get('/home', withAuth, (req, res) => {
     Post.findAll({
         attributes: [
           'id',

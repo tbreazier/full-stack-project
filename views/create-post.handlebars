@@ -8,16 +8,18 @@
 
         <div class="text-center homepage-title-plus-container col-md-4">
             <h1 class="text-center" style="font-size: 62px;">Simple Social</h1>
-            <a href="" id="create-post-btn" style="text-decoration: none; font-size: 32px;"><i class="fas fa-plus" style="font-size: 40px; color: rgb(20, 117, 33); text-shadow: 1px 1px 1px black;"></i> Create Post</a>
         </div>
 
         <div class="text-center col-md-2">
         </div>
 
         <div class="text-center user-info col-md-2">
-        <i class="fab fa-joomla" style="font-size: 38px;"></i>
-        <h6>{{ name }}</h6>
-        <span class="badge" style="color: rgb(231, 218, 31);">{{ avatar }}</span>
+            <img src="https://ui-avatars.com/api/?name={{user.first}}+{{user.last}}?color=ff0000">
+            <h6>{{user.first}}{{user.last}}</h6>
+            <div class="log-out-btn-container">
+                <a href="/" type="button" name="logout" class="btn btn-info btn-md" id="log-out-btn">Log Out</a>
+            </div>
+        </div>
     </div>
 
       </nav>
