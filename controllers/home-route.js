@@ -21,7 +21,7 @@ router.get('/home', withAuth, (req, res) => {
           console.log(err);
           res.status(500).json(err);
         });
-    });
+});
 
 router.get('/signup', (req, res) => {
     res.render('signup');
