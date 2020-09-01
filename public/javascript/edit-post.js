@@ -2,8 +2,8 @@ async function editFormHandler(event) {
     console.log("edited");
     event.preventDefault();
   
-    const title = document.querySelector('input[name="post-title"]').value;
-    const post_content = document.querySelector('input[name="post-content"]').value;
+    const title = document.querySelector('textarea[name="post-title"]').value;
+    const post_content = document.querySelector('textarea[name="post-content"]').value;
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
       ];
@@ -20,10 +20,10 @@ async function editFormHandler(event) {
       });
       
       if (response.ok) {
-        document.location.replace('/homepage');
+        document.location.replace('/home');
       } else {
         alert(response.statusText);
       }
   }
   
-  document.querySelector('#save-post-btn').addEventListener('submit', editFormHandler);
+  document.querySelector('#edit-post-form').addEventListener('submit', editFormHandler);

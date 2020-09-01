@@ -16,7 +16,7 @@ async function deleteFormHandler(event) {
       });
       
       if (response.ok) {
-        document.location.replace('/homepage');
+        document.location.replace('/home');
       } else {
         alert(response.statusText);
       }

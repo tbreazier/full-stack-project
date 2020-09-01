@@ -1,12 +1,4 @@
-// async function reply_click(event)
-// {
-//   console.log(event);
-//     alert(event.target);
-//     document.location.replace('/viewpost');
-//     console.log(event.target);
-// }
-
-// async function viewPostFormHandler(event) {
+// async function viewFormHandler(event) {
 //   event.preventDefault();
 
 //   const email = document.querySelector('#email').value.trim();
@@ -30,4 +22,4 @@
 //   }
 // }
 
-  document.querySelector('.clickable-post').addEventListener('click', reply_click);
+// document.querySelector('#login-form').addEventListener('submit', loginFormHandler);

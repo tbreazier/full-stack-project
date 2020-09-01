@@ -23,7 +23,7 @@ router.get('/home', withAuth, (req, res) => {
         });
     });
 
-router.get('/viewpost/:id', withAuth, (req, res) => {
+router.get('/viewposts', withAuth, (req, res) => {
   Post.findAll({
       attributes: [
         'id',
@@ -33,7 +33,7 @@ router.get('/viewpost/:id', withAuth, (req, res) => {
       .then(dbPostData => {
         const posts = dbPostData.map(Post => Post.get({ plain: true }));
   
-        res.render('viewpost', {
+        res.render('viewposts', {
           posts, redditData,
         });
       })
@@ -51,14 +51,17 @@ router.get('/create', (req, res) => {
   res.render('create-post');
 });
 
-// router.get('/viewpost/:id', (req, res) => {
-//   res.render('viewpost');
-// });
+router.get('/viewposts', (req, res) => {
+  res.render('viewposts');
+});
 
 router.get('/editpost', (req, res) => {
   res.render('editpost');
 });
 
+router.get('/editpost/:id', (req, res) => {
+  res.render('editpost');
+});
 
 router.get('/', (req, res) => {
     res.render('landingpage');
