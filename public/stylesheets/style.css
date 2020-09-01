@@ -8,9 +8,11 @@ body {
       rgba(0, 0, 0, 0.1)
     ), url("./page-bg.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   backdrop-filter: saturate(180%) blur(1rem);
-  height: 100vh;
+  height: 155vh;
+  width: 100%;
+  background-repeat: no-repeat;
 }
 
 p {
@@ -81,6 +83,17 @@ font-size: 1.1rem;
   font-size: 1.1rem;
   }
 
+.button-row {
+  display: flex;
+  justify-content: center;
+}
+
+  .sign-up-buttons {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .short-form-group {
   width: 100%;
   display: inline-flex;
@@ -140,15 +153,23 @@ font-size: 1.1rem;
   margin: 70px 50px 50px 50px;
 }
 
+.create-container {
+  margin: 70px 50px 50px 50px;
+  display: flex;
+  justify-content: center;
+}
+
 .post-row {
   display: flex;
   justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .posts-container {
   padding: 10px 10px 10px 10px;
   display: flex;
   justify-content: center;
+  align-items: center;
   min-width: 30%;
   /* background-color: rgba(0, 0, 0, 0.8); */
   color: white;
@@ -159,12 +180,106 @@ font-size: 1.1rem;
 .post {
   text-align: center;
   margin: 10px 0 10px 0;
-  width: 100%;
+  padding: 10px 10px 10px 10px;
+  width: 90%;
+  height: 9.7vh;
   /* background-color: rgba(111, 185, 255, 0.555); */
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
+  text-align: left;
 }
 
+.post-create {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  padding: 10px 10px 10px 10px;
+  width: 70%;
+  height: 100%;
+  /* background-color: rgba(111, 185, 255, 0.555); */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.post-edit {
+  text-align: center;
+  margin: 10px 0 10px 0;
+  padding: 10px 10px 10px 10px;
+  width: 90%;
+  height: 100%;
+  /* background-color: rgba(111, 185, 255, 0.555); */
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card-post {
+  width: 50%;
+  color: rgb(0, 0, 0);
+  /* background-color: rgb(0, 0, 0, 0.8); */
+  border-radius: 10px;
+  margin: 15px 0 15px 0;
+}
+
+.card-post-header {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-input-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.card-input-textarea {
+  width: 90%;
+}
+
+/* .edit-post-btn-container {
+  display: flex;
+  justify-content: flex-start;
+} */
+
+#edit-post-btn {
+  margin: 10px 5px 10px 5px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(231, 218, 31);
+  font-size: 18px;
+  border: solid rgb(0, 0, 0);
+  border-width: 1px;
+  cursor: pointer;
+}
+
+#upload-post-btn {
+  margin: 10px 5px 10px 5px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(20, 117, 33);
+  font-size: 18px;
+  border: solid rgb(0, 0, 0);
+  border-width: 1px;
+  cursor: pointer;
+}
+
+#save-post-btn {
+  margin: 10px 5px 10px 5px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(20, 117, 33);
+  font-size: 20px;
+  border: solid rgb(0, 0, 0);
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+#delete-post-btn {
+  margin: 10px 5px 10px 5px;
+  color: rgb(0, 0, 0);
+  background-color: hsl(0, 100%, 70%);
+  font-size: 20px;
+  border: solid rgb(0, 0, 0);
+  border-width: 1px;
+  border-radius: 5px;
+}
 
 
 
@@ -174,29 +289,59 @@ font-size: 1.1rem;
 #log-in-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #sign-up-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #go-back-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #log-out-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
 }
 
 #create-post-btn:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
   }
+
+  #upload-post-btn:hover {
+    transform: scale(1.1);
+    transition: 0.05s;
+    cursor: pointer;
+    }
 
 .post-column-title:hover {
   transform: scale(1.1);
   transition: 0.05s;
+  cursor: pointer;
+}
+
+#save-post-btn:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
+  cursor: pointer;
+}
+
+#delete-post-btn:hover {
+  transform: scale(1.1);
+  transition: 0.05s;
+  cursor: pointer;
+}
+
+.post:hover {
+  transform: scale(1.02);
+  transition: 0.05s;
+  cursor: pointer;
 }

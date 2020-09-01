@@ -26,6 +26,11 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+router.get('/create', (req, res) => {
+  res.render('create-post');
+});
+
+
 router.get('/', (req, res) => {
     res.render('landingpage');
 });
