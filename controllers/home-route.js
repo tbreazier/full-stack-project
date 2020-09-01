@@ -23,6 +23,26 @@ router.get('/home', withAuth, (req, res) => {
         });
     });
 
+router.get('/viewpost/:id', withAuth, (req, res) => {
+  Post.findAll({
+      attributes: [
+        'id',
+        'content',
+      ],
+    })
+      .then(dbPostData => {
+        const posts = dbPostData.map(Post => Post.get({ plain: true }));
+  
+        res.render('viewpost', {
+          posts, redditData,
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 router.get('/signup', (req, res) => {
     res.render('signup');
 });
@@ -31,9 +51,9 @@ router.get('/create', (req, res) => {
   res.render('create-post');
 });
 
-router.get('/viewpost', (req, res) => {
-  res.render('viewpost');
-});
+// router.get('/viewpost/:id', (req, res) => {
+//   res.render('viewpost');
+// });
 
 
 router.get('/', (req, res) => {

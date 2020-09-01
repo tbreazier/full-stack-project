@@ -1,9 +1,10 @@
-async function reply_click(clicked_id)
-{
-    alert(clicked_id);
-    document.location.replace('/viewpost');
-    console.log(clicked_id);
-}
+// async function reply_click(event)
+// {
+//   console.log(event);
+//     alert(event.target);
+//     document.location.replace('/viewpost');
+//     console.log(event.target);
+// }
 
 // async function viewPostFormHandler(event) {
 //   event.preventDefault();
@@ -29,4 +30,4 @@ async function reply_click(clicked_id)
 //   }
 // }
 
-  document.querySelector('.post').addEventListener('click', reply_click);
+  document.querySelector('.clickable-post').addEventListener('click', reply_click);

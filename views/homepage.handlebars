@@ -32,7 +32,7 @@
             <a href="" class="post-column-title" style="text-decoration: none;"><h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Text ]</h2></a>
             {{#each posts as |post|}}
             <div class="post" style="text-overflow: ellipsis; overflow: hidden;">
-                <a href="/viewpost" style="text-decoration: none; color: white;"><h4>{{content}}</h4></a>
+                <a href="/viewpost/{{id}}" style="text-decoration: none; color: white;" class="clickable-post"><h4>{{content}}</h4></a>
             </div>
             {{/each}}
         </div>
@@ -48,4 +48,5 @@
     </div>
     <script src="javascript/logout.js"></script>
 </div>
+{{!-- <script src="javascript/view-post.js"></script> --}}
 

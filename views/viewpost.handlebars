@@ -30,22 +30,27 @@
         <div id="text-posts" class="posts-container col-md-6">
             <a href="" class="post-column-title" style="text-decoration: none;"><h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Text ]</h2></a>
             {{#each posts as |post|}}
-            <div class="post" style="text-overflow: ellipsis; overflow: hidden;">
-                <a href="/api/posts" style="text-decoration: none; color: white;"><h4>{{content}}</h4></a>
+            <div class="post" id="post-{{id}}">
+                <a href="/viewpost/{{id}}" style="text-decoration: none; color: white;" class="clickable-post"><h4>{{content}}</h4></a>
             </div>
             {{/each}}
         </div>
-    
-        <div id="trending-posts" class="posts-container col-md-6">
-            <a href="" class="post-column-title" style="text-decoration: none;"><h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Trending ]</h2></a>
-            {{#each redditData as |reddit|}}
-            <div class="post" style="text-overflow: ellipsis; overflow: hidden;">
-                <a style="text-decoration: none; color: white;" href="{{url}}"><h4>{{title}}</h4></a>
-            </div>
-            {{/each}}
-        </div>
+
+<section class="card-post">
+    <div class="card-post-header">
+        <h2>Edit Post</h2>
     </div>
-</div>
+    <form>
+        <div>
+            <label for="post-content">Content</label>
+            <textarea class="card-input-textarea" name="post-text" value="{{post.post_text}}"></textarea>
+        </div>
+
+        <button class="card-button" type="submit" id="edit-post-btn">Save post</button>
+        <button class="card-button" type="button" id="delete-post-btn">Delete post</button>
+    </form>
+</section>
+
 {{#if loggedIn}}
 <script src="/javascript/logout.js"></script>
 <script src="/javascript/view-post.js"></script>
