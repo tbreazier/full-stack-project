@@ -13,6 +13,7 @@
 
         <div class="text-center col-md-2">
         </div>
+
         <div class="text-center user-info col-md-2">
             {{#each user}}
             <img src="https://ui-avatars.com/api/?name={{this.datavalues.first}}+{{this.datavalues.last}}?color=ff0000">
@@ -27,17 +28,8 @@
 
 <div class="main-container">
     <div class="row post-row">
-        <div id="text-posts" class="posts-container col-md-6">
-            <a href="/viewposts" class="post-column-title" style="text-decoration: none;"><h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ View Posts ]</h2></a>
-            {{#each posts as |post|}}
-            <div class="post" style="text-overflow: ellipsis; overflow: hidden;">
-                <a href="/editpost/{{id}}" style="text-decoration: none; color: white; word-break:break-all;" class="clickable-post"><h4>{{content}}</h4></a>
-            </div>
-            {{/each}}
-        </div>
-    
-        <div id="trending-posts" class="posts-container col-md-6">
-            <a href="/viewtrending" class="post-column-title" style="text-decoration: none;"><h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ View Reddit Trending ]</h2></a>
+        <div id="trending-posts" class="posts-container col-md-8">
+            <h2 class="text-center" style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Reddit Trending ]</h2>
             {{#each redditData as |reddit|}}
             <div class="post" style="text-overflow: ellipsis; overflow: hidden;">
                 <a style="text-decoration: none; color: white;" href="{{url}}"><h4>{{title}}</h4></a>

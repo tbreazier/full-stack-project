@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const fetch = require('node-fetch');
-const { Post, User } = require('../models')
+const { Post, User } = require('../models');
+const withAuth = require("../utils/auth");
 
-router.get('/home', (req, res) => {
+router.get('/home', withAuth, (req, res) => {
     Post.findAll({
         attributes: [
           'id',
@@ -22,6 +23,66 @@ router.get('/home', (req, res) => {
         });
     });
 
+router.get('/viewposts', withAuth, (req, res) => {
+  Post.findAll({
+      attributes: [
+        'id',
+        'content',
+      ],
+    })
+      .then(dbPostData => {
+        const posts = dbPostData.map(Post => Post.get({ plain: true }));
+  
+        res.render('viewposts', {
+          posts, redditData,
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  router.get('/viewtrending', withAuth, (req, res) => {
+    Post.findAll({
+        attributes: [
+          'id',
+          'content',
+        ],
+      })
+        .then(dbPostData => {
+          const posts = dbPostData.map(Post => Post.get({ plain: true }));
+    
+          res.render('viewtrending', {
+            posts, redditData,
+          });
+        })
+        .catch(err => {
+          console.log(err);
+          res.status(500).json(err);
+        });
+    });
+
+router.get('/editpost/:id', withAuth, (req, res) => {
+  Post.findAll({
+      attributes: [
+        'id',
+        'content',
+      ],
+    })
+      .then(dbPostData => {
+        const posts = dbPostData.map(Post => Post.get({ plain: true }));
+  
+        res.render('editpost', {
+          posts
+        });
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
 router.get('/signup', (req, res) => {
     res.render('signup');
 });
@@ -30,6 +91,21 @@ router.get('/create', (req, res) => {
   res.render('create-post');
 });
 
+router.get('/viewposts', (req, res) => {
+  res.render('viewposts');
+});
+
+router.get('/viewtrending', (req, res) => {
+  res.render('viewtrending');
+});
+
+router.get('/editpost', (req, res) => {
+  res.render('editpost');
+});
+
+router.get('/editpost/:id', (req, res) => {
+  res.render('editpost');
+});
 
 router.get('/', (req, res) => {
     res.render('landingpage');
