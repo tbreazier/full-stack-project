@@ -25,6 +25,12 @@ h4 {
   margin: 0 0 0 0;
 }
 
+.profile-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
 .text-info {
     color: black !important;
     font-size: 3rem !important;

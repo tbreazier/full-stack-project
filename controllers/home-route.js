@@ -2,6 +2,11 @@ const router = require("express").Router();
 const fetch = require('node-fetch');
 const { Post, User } = require('../models');
 const withAuth = require("../utils/auth");
+require('dotenv').config();
+"use strict";
+const nodemailer = require('nodemailer');
+const { getMaxListeners } = require('process');
+const { info } = require('console');
 
 router.get('/home', withAuth, (req, res) => {
     Post.findAll({
@@ -13,9 +18,26 @@ router.get('/home', withAuth, (req, res) => {
         .then(dbPostData => {
           const posts = dbPostData.map(Post => Post.get({ plain: true }));
     
+          // res.render('homepage', {
+          //   posts, redditData,
+          // });
+          return posts
+        })
+        .then(posts => {
+          console.log(req.session);
+          User.findOne({
+            where: {id:req.session.user_id},
+            attributes: [
+              'first',
+              'last',
+            ],
+          })
+        .then(userData => {
+          console.log(userData.get({ plain: true }));
           res.render('homepage', {
-            posts, redditData,
+            posts, redditData, user: userData.get({ plain: true })
           });
+        })
         })
         .catch(err => {
           console.log(err);
@@ -122,6 +144,34 @@ router.get('/login', (req, res) => {
     }
   
     res.render('landingpage');
+});
+
+router.post('/send', function(req, res, next) {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.email_address,
+      pass: process.env.email_password
+    }
+  })
+  const mailOptions = {
+    from: 'simple.social.fullstack@gmail.com',
+    to: 'simple.social.fullstack@gmail.com',
+    subject: 'Invitation to Join Simple Social!',
+    text: 'Your friend just invited you to join Simple Social!'
+  //   replyTo: `${req.body.email}`
+  }
+
+  transporter.sendEmail(mailOptions, function(err, res) {
+    if (err) {
+      console.error('there was an error: ', err);
+    } else {
+      console.log('here is the res: ', res)
+    };
+    console.log('Message sent: ' + mailOptions.subject);
+    res.sendStatus(200);
+  });
+  return res.end();
 });
 
 let url = 'https://www.reddit.com/.json?limit=5';
