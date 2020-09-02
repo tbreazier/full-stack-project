@@ -15,7 +15,7 @@ AS A social media user I WANT to post text, photos, videos, etc to a user-friend
 
 ### Login Page
 
-![website screenshot](.\public\images\login.jpg)
+<img src ="/public/images/login.jpg">
 
 ### Signup Page
 
