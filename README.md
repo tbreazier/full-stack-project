@@ -15,20 +15,20 @@ AS A social media user I WANT to post text, photos, videos, etc to a user-friend
 
 ### Login Page
 
-<img src ="/public/images/login.jpg">
+<img src ="public/images/login.jpg">
 
 ### Signup Page
 
-![website screenshot](.\public\images\signup.jpg)
+<img src ="public/images/signup.jpg">
 
-### Landing Page
+### Homepage
 
-![website screenshot](.\public\images\homepage.jpg)
+<img src ="public/images/homepage.jpg">
 
 ### Post Page
 
-![website screenshot](.\public\images\posts.jpg)
+<img src ="public/images/posts.jpg">
 
 ### Trending Page
 
-![website screenshot](.\public\images\trending.jpg)
+<img src ="public/images/trending.jpg">
