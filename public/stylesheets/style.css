@@ -25,10 +25,19 @@ h4 {
   margin: 0 0 0 0;
 }
 
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .profile-img {
+  margin: 10px 0 10px 0;
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .text-info {
@@ -88,6 +97,13 @@ font-size: 1.1rem;
   border-color: black;
   font-size: 1.1rem;
   }
+
+  #invite-btn {
+    color: black;
+    background-color: hsl(298, 100%, 70%);
+    border-color: black;
+    font-size: 1.1rem;
+    }
 
 .button-row {
   display: flex;

@@ -2,7 +2,7 @@
         
         <div class="col-md-4">
             <div class="sign-up-buttons">
-                <button type="submit" name="invite" class="btn btn-info btn-md" id="go-back-btn" value="Go Back">Invite</button>
+                <a href="/home"><input type="submit" name="goback" class="btn btn-info btn-md" id="go-back-btn" value="Go Back"></a>
             </div>
         </div>
 
@@ -15,13 +15,6 @@
         </div>
 
         <div class="text-center user-info col-md-2">
-            {{#each user}}
-            <img src="https://ui-avatars.com/api/?name={{this.datavalues.first}}+{{this.datavalues.last}}?color=ff0000">
-            <h6>{{this.datavalues.first}}{{this.datavalues.last}}</h6>
-            {{/each}}
-            <div class="log-out-btn-container">
-                <a href="/login" type="button" name="logout" class="btn btn-info btn-md" id="log-out-btn">Log Out</a>
-            </div>
         </div>
 
 </nav>
@@ -37,7 +30,6 @@
             {{/each}}
         </div>
     </div>
-    <script src="javascript/logout.js"></script>
 </div>
-{{!-- <script src="javascript/view-post.js"></script> --}}
+
 
