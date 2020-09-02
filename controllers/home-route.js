@@ -64,18 +64,22 @@ router.get('/viewposts', withAuth, (req, res) => {
     });
 
 router.get('/editpost/:id', withAuth, (req, res) => {
-  Post.findAll({
+  Post.findOne({
       attributes: [
         'id',
         'content',
       ],
+      raw: true,
+      where: {
+        id: req.params.id
+    },
     })
       .then(dbPostData => {
-        const posts = dbPostData.map(Post => Post.get({ plain: true }));
-  
-        res.render('editpost', {
-          posts
-        });
+        // const posts = dbPostData.map(Post => Post.get({ plain: true }));
+        // res.json(dbPostData);
+        console.log(dbPostData);
+        // console.log(dbPostData.dataValues.content);
+        res.render('editpost', dbPostData);
       })
       .catch(err => {
         console.log(err);

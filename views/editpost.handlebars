@@ -1,16 +1,9 @@
-<div>
-   <h1>{{content}}</h1>
-</div>
-
-
 <div class="row post-row">
     <div id="text-posts" class="posts-container col-md-8">
             <h2 style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Posts ]</h2>
-            {{#each posts as |post|}}
-            <div class="post">
-                <a href="/editpost/{{id}}" style="text-decoration: none; color: white; word-break:break-all;" class="clickable-post"><h4>{{content}}</h4></a>
+            <div class="post-edit">
+                <h4>{{content}}</h4>
             </div>
-            {{/each}}
         </div>
 
         <section class="card-post">
@@ -18,14 +11,14 @@
                 <h2>Edit Post</h2>
             </div>
             <form class="edit-post-form" id="edit-post-form">
-                <div class="edit-input-container edit-title">
+                {{!-- <div class="edit-input-container edit-title">
                     <label for="post-title"></label>
                     <textarea class="card-input-textarea" name="post-title" value="{{user.first}}" placeholder="Title"></textarea>
-                </div>
+                </div> --}}
 
                 <div class="edit-input-container edit-content">
                     <label for="post-content"></label>
-                    <textarea class="card-input-textarea" name="post-content" value="{{post.content}}" placeholder="Content"></textarea>
+                    <textarea class="card-input-textarea" name="post-content" placeholder="Content">{{content}}</textarea>
                 </div>
                
                 <div class="edit-input-container">

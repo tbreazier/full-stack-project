@@ -57,7 +57,7 @@ router.get('/', (req, res) => {
 // POST /api/posts
 router.post('/', withAuth, (req, res) => {
     Post.create({
-        title: req.body.title,
+        // title: req.body.title,
         content: req.body.content,
         user_id: req.session.user_id
     })
@@ -72,7 +72,7 @@ router.post('/', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
     Post.update(
         {
-            title: req.body.title,
+            // title: req.body.title,
             content: req.body.content
         },
         {
