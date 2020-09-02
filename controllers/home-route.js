@@ -149,7 +149,7 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/send', function(req, res, next,) {
-  console.log(req.body);
+  // console.log(req.body);
   // console.log("Session:" + console.log(req.sessionID);
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -162,7 +162,7 @@ router.post('/send', function(req, res, next,) {
     from: 'simple.social.fullstack@gmail.com',
     to: 'simple.social.fullstack@gmail.com',
     subject: 'Invitation to Join Simple Social!',
-    text: 'Your friend just invited you to join Simple Social!',
+    text: 'Your friend just invited you to join Simple Social! Follow this link to join: https://simple-social-fullstack.herokuapp.com/',
     attachments: [
       { filename: 'login.jpg', path: './public/images/login.jpg' }
     ]
