@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+        
+        <div class="col-md-4">
+            <div class="sign-up-buttons">
+                <a href="/home"><input type="submit" name="goback" class="btn btn-info btn-md" id="go-back-btn" value="Go Back"></a>
+            </div>
+        </div>
+
+        <div class="text-center homepage-title-plus-container col-md-4">
+            <a href="/home" style="text-decoration: none; color: rgb(0, 0, 0);"><h1 class="text-center" style="font-size: 62px;">Simple Social</h1></a>
+            <a href="/create" id="create-post-btn" style="text-decoration: none; font-size: 32px;"><i class="fas fa-plus" style="font-size: 40px; color: rgb(20, 117, 33); text-shadow: 1px 1px 1px black;"></i> Create Post</a>
+        </div>
+
+        <div class="text-center col-md-2">
+        </div>
+
+        <div class="text-center user-info col-md-2">
+        </div>
+
+</nav>
+
+<div class="main-container">
+    <div class="row post-row">
+        <div id="text-posts" class="posts-container col-md-8">
+            <h2 style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Posts ]</h2>
+            {{#each posts as |post|}}
+            <div class="post">
+                <a href="/editpost/{{id}}" style="text-decoration: none; color: white; word-break:break-all;" class="clickable-post"><h4>{{content}}</h4></a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+

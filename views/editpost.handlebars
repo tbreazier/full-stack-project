@@ -1,0 +1,35 @@
+<div class="row post-row">
+    <div id="text-posts" class="posts-container col-md-8">
+            <h2 style="color: rgb(0, 0, 0); text-shadow: 1px 1px 1px rgb(255, 255, 255);">[ Posts ]</h2>
+            <div class="post-edit">
+                <h4>{{content}}</h4>
+            </div>
+        </div>
+
+        <section class="card-post">
+            <div class="card-post-header">
+                <h2>Edit Post</h2>
+            </div>
+            <form class="edit-post-form" id="edit-post-form">
+                {{!-- <div class="edit-input-container edit-title">
+                    <label for="post-title"></label>
+                    <textarea class="card-input-textarea" name="post-title" value="{{user.first}}" placeholder="Title"></textarea>
+                </div> --}}
+
+                <div class="edit-input-container edit-content">
+                    <label for="post-content"></label>
+                    <textarea class="card-input-textarea" name="post-content" placeholder="Content">{{content}}</textarea>
+                </div>
+               
+                <div class="edit-input-container">
+                    <button class="card-button" type="submit" id="save-post-btn">Save Post</button>
+                    <button class="card-button" type="button" id="delete-post-btn">Delete post</button>
+                </div>
+            
+            </form>
+        </section>
+</div>
+
+
+<script src="/javascript/edit-post.js"></script>
+<script src="/javascript/delete-post.js"></script>
