@@ -24,12 +24,13 @@ router.get('/home', withAuth, (req, res) => {
           return posts
         })
         .then(posts => {
-          console.log(req.session);
+          console.log("session info:" + req.session);
           User.findOne({
             where: {id:req.session.user_id},
             attributes: [
               'first',
               'last',
+              'email',
             ],
           })
         .then(userData => {
@@ -37,6 +38,7 @@ router.get('/home', withAuth, (req, res) => {
           res.render('homepage', {
             posts, redditData, user: userData.get({ plain: true })
           });
+          return userData.get({ plain: true });
         })
         })
         .catch(err => {
@@ -146,7 +148,9 @@ router.get('/login', (req, res) => {
     res.render('landingpage');
 });
 
-router.post('/send', function(req, res, next) {
+router.post('/send', function(req, res, next,) {
+  // console.log(req.body);
+  // console.log("Session:" + console.log(req.sessionID);
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -158,11 +162,14 @@ router.post('/send', function(req, res, next) {
     from: 'simple.social.fullstack@gmail.com',
     to: 'simple.social.fullstack@gmail.com',
     subject: 'Invitation to Join Simple Social!',
-    text: 'Your friend just invited you to join Simple Social!'
+    text: 'Your friend just invited you to join Simple Social! Follow this link to join: https://simple-social-fullstack.herokuapp.com/',
+    attachments: [
+      { filename: 'login.jpg', path: './public/images/login.jpg' }
+    ]
   //   replyTo: `${req.body.email}`
   }
 
-  transporter.sendEmail(mailOptions, function(err, res) {
+  transporter.sendMail(mailOptions, function(err, res) {
     if (err) {
       console.error('there was an error: ', err);
     } else {
