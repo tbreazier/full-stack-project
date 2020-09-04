@@ -149,6 +149,8 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/send', function(req, res, next,) {
+  console.log(req.email);
+  console.log("req.body" + req.body);
   // console.log(req.body);
   // console.log("Session:" + console.log(req.sessionID);
   const transporter = nodemailer.createTransport({
