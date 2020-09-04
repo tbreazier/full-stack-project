@@ -1,30 +1,23 @@
+async function mailerFormHandler(event) {
+    event.preventDefault();
+  
+    const email = document.querySelector('#invite-textarea').value.trim();
+  
+    if (email) {
+      const response = await fetch('/send', {
+        method: 'post',
+        body: JSON.stringify({
+          email
+        }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+  
+      if (response.ok) {
+        document.location.replace('/home');
+      } else {
+        alert(response.statusText);
+      }
+    }
+  }
 
-
-
-
-
-
-
-
-
-// const sendEmail = function(name, email, message) {
-//     fetch('/send', {
-//       method: 'POST',
-//       headers: {
-//         'Accept': 'application/json',
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify({
-//         name: name,
-//         email: email,
-//         message: message
-//       })
-//     })
-//     .then((res) => res.json())
-//     .then((res) => {
-//       console.log('here is the response: ', res);
-//     })
-//     .catch((err) => {
-//       console.error('here is the error: ', err);
-//     })
-//    }
+  document.querySelector('#invite-a-friend').addEventListener('submit', mailerFormHandler);
